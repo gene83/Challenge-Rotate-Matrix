@@ -28,6 +28,7 @@ module.exports = class MatrixRotator {
         transpose[y][x] = this.matrix[x][y];
       }
     }
+
     if (direction == 'ClockWise') {
       transpose.forEach(row => row.reverse());
       this.matrix = transpose;
@@ -39,6 +40,7 @@ module.exports = class MatrixRotator {
 
       for (let y = 0; y < newHeight; y++) {
         columnsReversed[y] = [];
+
         for (let x = 0; x < newWidth; x++) {
           columnsReversed[y][x] = transpose[newHeight - y - 1][x];
         }
